@@ -16,11 +16,12 @@ export default function CardItemMain(props) {
             <div className="card-body">
               <h5 className="card-title">{row.name}</h5>
               <div className="card-text text-left">
-                <p>{row.location}</p>
-                <p>{row.contact}</p>
-                <p>{row.time}</p>
+                <p><i className="fas fa-map-marker"></i>  {row.location}</p>
+                <p><i className="fas fa-info-circle"></i>
+{row.contact}</p>
+                <p><i className="fas fa-clock"></i>{row.time}</p>
               </div>
-              {/* <a href="#" className="btn btn-primary">Go somewhere</a> */}
+              <a href="#" className="btn btn-primary" >Подробнее</a>
             </div>
           </div>
         ))}
