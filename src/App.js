@@ -32,7 +32,9 @@ class App extends Component {
         <button className="btn btn-primary" onClick={this.sstatea}>
           Аптеки
         </button>
+    <div className=" wraper">
         <CardItemMain data={this.state.data} ptype={this.state.ptype} />
+          </div>
       </div>;
   }
 }
