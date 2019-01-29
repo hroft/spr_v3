@@ -15,11 +15,31 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('/data/data2.json')
+    fetch('/data/data.json')
       .then(response => response.json())
       .then(data => this.setState({ data }));
+      this.setState({
+        ptype: localStorage.getItem('spr_ptype')
+      })
    }
 
+  //  componentWillUnmount() {
+  //   localStorage.setItem('someSavedState', this.state.ptype)
+  // }
+
+  // componentWillMount() {
+  //   const save_ptype = JSON.parse(localStorage.getItem('someSavedState'));
+  //   this.setState({
+  //     ptype: save_ptype
+  //     });
+  // }
+
+  // componentWillUpdate(nextProps, nextState){
+  //   localStorage.setItem('spr_ptype', this.state.ptype);
+  // }
+  componentDidUpdate(nextProps, nextState){
+    localStorage.setItem('spr_ptype', this.state.ptype);
+  }
 
   sstatet = () => {
     this.setState({
@@ -34,6 +54,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      
+
         <nav>
           <button className="btn btn-primary" onClick={this.sstatet}>
             Магазины
