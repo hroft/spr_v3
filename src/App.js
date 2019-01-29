@@ -3,7 +3,7 @@ import "./App.css";
 import CardItemMain from "./component/CardItemMain/CardItemMain";
 // import data from "./data/data.json";
 
-const DATAJSON = 'https://levencovka.ru/data.json';
+// const DATAJSON = 'https://levencovka.ru/data.json';
 
 class App extends Component {
   constructor(props) {
@@ -57,11 +57,37 @@ class App extends Component {
       
 
         <nav>
+
           <button className="btn btn-primary" onClick={this.sstatet}>
-            Магазины
+          Магазины, торговые центры
           </button>
           <button className="btn btn-primary" onClick={this.sstatea}>
-            Аптеки
+          Аптеки, здравоохранение
+          </button>
+          <button className="btn btn-primary" >
+          Ремонтные мастерские, прочие услуги
+          </button>
+          <button className="btn btn-primary" >
+          Образование, культура
+          </button>
+          <button className="btn btn-primary" >
+          Детские сады и развивающие центры
+          </button>
+          <button className="btn btn-primary" >
+          Спортивные объекты и учреждения
+          </button>
+          <button className="btn btn-primary"
+          >
+          ЖКХ
+          </button>
+          <button className="btn btn-primary">
+          Логистика, транспорт
+          </button>
+          <button className="btn btn-primary" >
+          Развлечения, кафе
+          </button>
+          <button className="btn btn-primary">
+          Банки, финансовые учреждения
           </button>
         </nav>
         <div className=" wraper">
