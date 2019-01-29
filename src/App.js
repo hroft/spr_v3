@@ -1,16 +1,25 @@
 import React, { Component } from "react";
 import "./App.css";
 import CardItemMain from "./component/CardItemMain/CardItemMain";
-import data from "./data/data.json";
+// import data from "./data/data.json";
+
+const DATAJSON = 'https://levencovka.ru/data.json';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: data,
+      data: [],
       ptype: ""
     };
   }
+
+  componentDidMount() {
+    fetch('/data/data2.json')
+      .then(response => response.json())
+      .then(data => this.setState({ data }));
+   }
+
 
   sstatet = () => {
     this.setState({
