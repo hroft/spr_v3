@@ -8,6 +8,7 @@
   grid-column-gap: 20px;
   grid-row-gap: 20px;
   /* max-width: 800px; */
+  padding-top: 20px;
 }
 
 nav>button{
@@ -22,4 +23,12 @@ nav>button{
 .card-title{
   border-bottom: 1px solid black;
   padding-bottom: 10px;
+}
+.button_wraper{
+  display: flex;
+  flex-direction: column;
+}
+.btn{
+  margin: 5px;
+  font-weight: 600;
 }

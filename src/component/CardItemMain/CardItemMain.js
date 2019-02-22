@@ -31,7 +31,7 @@ export default function CardItemMain(props) {
                 </p>
               </div>
               <a
-                href={row.more}
+                href={'https://levencovka.ru/?p='+row.more}
                 className={
                   row.more
                     ? "btn btn-success active"

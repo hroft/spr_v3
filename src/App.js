@@ -41,54 +41,55 @@ class App extends Component {
     localStorage.setItem('spr_ptype', this.state.ptype);
   }
 
-  sstatet = () => {
-    this.setState({
-      ptype: "torg"
-    });
-  };
-  sstatea = () => {
-    this.setState({
-      ptype: "apt"
-    });
-  };
+  // sstatet = () => {
+  //   this.setState({
+  //     ptype: "torg"
+  //   });
+  // };
+
   render() {
     return (
       <div className="App">
       
 
         <nav>
-
-          <button className="btn btn-primary" onClick={this.sstatet}>
+          <div className="button_wraper">
+          <button id="torg" className="btn btn-primary" onClick={()=>this.setState({ptype:'torg'})}>
           Магазины, торговые центры
-          </button>
-          <button className="btn btn-primary" onClick={this.sstatea}>
+          </button> 
+          <button id="torg" className="btn btn-primary" onClick={()=>this.setState({ptype:'apt'})}>
           Аптеки, здравоохранение
           </button>
-          <button className="btn btn-primary" >
+          <button id="torg" className="btn btn-primary" onClick={()=>this.setState({ptype:'rem'})}>
           Ремонтные мастерские, прочие услуги
           </button>
-          <button className="btn btn-primary" >
+          <button id="torg" className="btn btn-primary" onClick={()=>this.setState({ptype:'obr'})}>
           Образование, культура
           </button>
-          <button className="btn btn-primary" >
-          Детские сады и развивающие центры
+          <button id="torg" className="btn btn-primary" onClick={()=>this.setState({ptype:'kr'})}>
+          Салоны красоты, прочие услуги
           </button>
-          <button className="btn btn-primary" >
-          Спортивные объекты и учреждения
-          </button>
-          <button className="btn btn-primary"
-          >
+          <button id="torg" className="btn btn-primary" onClick={()=>this.setState({ptype:'gkh'})}>
           ЖКХ
           </button>
-          <button className="btn btn-primary">
+          {/* <button id="torg" className="btn btn-primary" onClick={()=>this.setState({ptype:'child'})}>
+          Детские сады и развивающие центры
+          </button> */}
+          {/* <button id="torg" className="btn btn-primary" onClick={()=>this.setState({ptype:'sport'})}>
+          Спортивные объекты и учреждения
+          </button> */}
+
+          {/* <button id="torg" className="btn btn-primary" onClick={()=>this.setState({ptype:'transport'})}>
           Логистика, транспорт
-          </button>
-          <button className="btn btn-primary" >
+          </button> */}
+          {/* <button id="torg" className="btn btn-primary" onClick={()=>this.setState({ptype:'kafe'})}>
           Развлечения, кафе
-          </button>
-          <button className="btn btn-primary">
+          </button> */}
+          {/* <button id="torg" className="btn btn-primary" onClick={()=>this.setState({ptype:'bank'})}>
           Банки, финансовые учреждения
-          </button>
+          </button> */}
+
+          </div>
         </nav>
         <div className=" wraper">
           <CardItemMain data={this.state.data} ptype={this.state.ptype} />
